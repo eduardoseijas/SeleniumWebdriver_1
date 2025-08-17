@@ -31,7 +31,18 @@ git checkout -- .
 
 *con el comando
 git log --oneline --decorate --all --graph
-puedes ver todas las actualizaciones de ese respaldo git
+puedes ver todas las actualizaciones de ese respaldo git, otra forma de lanzarlo es
+con el comando
+git lg
 
 *con el comando
 git status -s
+
+*con el comando
+git config --global -e
+podemos ver la configuracion global
+
+*para modificar cargando algun archivo, con el comando
+git reset --soft con el numero de ese archivo cargado que podemos ver cuando haceos el
+git lg
+por ejemplo git reset --soft 555179e
