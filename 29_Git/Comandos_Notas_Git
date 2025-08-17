@@ -46,3 +46,6 @@ podemos ver la configuracion global
 git reset --soft con el numero de ese archivo cargado que podemos ver cuando haceos el
 git lg
 por ejemplo git reset --soft 555179e
+
+*El comando que nos da todos los momivientos realizados
+git reflog
