@@ -1,18 +1,31 @@
-Con este comando configuro para que sepa mi nombre de usuario, para presentarnos
+*Con este comando configuro para que sepa mi nombre de usuario, para presentarnos
 git config --global user.name "Eduardo"
 
-puede ser con el mail tambien
+*puede ser con el mail tambien
 git config --global user.email "eduardoseijas18@gmail.com"
 
-Comando para iniciar en el sistema, una copia o respaldo es
+*Comando para iniciar en el sistema, una copia o respaldo es
 git init
 
-Para ver el estatus de esto, usamos el comando
+*Para ver el estatus de esto, usamos el comando
 
 git status
 
-para agregar, debo usar el comando
+*para agregar, debo usar el comando
 
 git add .. (este siempre se usa antes de hacer el git commit -m "")
 
-con el comando git log puedo ver el estatos del proyecto, quien lo unicio el primer nombre
+*el comando git add con un *. y colocando el formato te cargan todos los archivos que tengas
+en ese formato que no este en el repositorio
+por ejemplo
+
+git add *.jsosn o git add *.mp4
+
+*para borrar todos los archivos el comando es
+git reset *.mp4
+
+*con el comando git log puedo ver el estatos del proyecto, quien lo unicio el primer nombre
+
+*Comando para recuperar archivos borrados
+git checkout -- .
+
