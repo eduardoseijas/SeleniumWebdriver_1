@@ -14,3 +14,5 @@ git status
 para agregar, debo usar el comando
 
 git add .. (este siempre se usa antes de hacer el git commit -m "")
+
+con el comando git log puedo ver el estatos del proyecto, quien lo unicio el primer nombre
