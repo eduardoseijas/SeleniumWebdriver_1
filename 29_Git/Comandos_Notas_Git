@@ -29,3 +29,9 @@ git reset *.mp4
 *Comando para recuperar archivos borrados
 git checkout -- .
 
+*con el comando
+git log --oneline --decorate --all --graph
+puedes ver todas las actualizaciones de ese respaldo git
+
+*con el comando
+git status -s
