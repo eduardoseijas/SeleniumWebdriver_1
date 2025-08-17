@@ -8,3 +8,6 @@ git remote add origin https://github.com/eduardoseijas/SeleniumWebdriver_1.git
 (este comando de arriba lo saco de la pag)
 git branch -M master
 git push -u origin master
+
+luego de cualquier cambio para que sirva y se vea, hay que hacer un git push
+despues del git commit -m ""
