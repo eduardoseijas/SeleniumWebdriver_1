@@ -1,0 +1,11 @@
+pag web: pypi.org/project/pytest-soft-assertions/
+
+Comando para instalar
+pip install pytest-soft-assertions
+
+al momento de lanzar debes colocar al final de donde este ubicado el archivo que lanzas,esto:
+--soft-asserts
+
+en mi cazo, el ejemplo para este proyecto, que estoy lanzando desde la raiz, seria
+
+python -m pytest .\26_Pytest_Assertions_y_SoftAssertions\Asserts_7_Reporte_Con_SoftAssertions.py --soft-asserts

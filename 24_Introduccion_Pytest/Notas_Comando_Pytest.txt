@@ -1,0 +1,23 @@
+*pytest el nombre del archivo es decir:
+por ejemplo
+
+pytest Test_Loguin_1.py (este es el que esta en la carpeta 24, esto es si yo estuviera dentro de esa carpeta para correrlo)
+
+*Si estoy desde la raiz es
+python -m pytest .\24_Introduccion_Pytest\Test_Loguin_1.py
+
+*otra forma si quiero que me desglose 1 por 1 seria agregandole -s
+por ejemplo
+python -m pytest .\24_Introduccion_Pytest\Test_Loguin_1.py -s
+
+*para mejorarlo que te de mas info puede ser con la -v
+python -m pytest .\24_Introduccion_Pytest\Test_Loguin_1.py -s -v
+
+
+*y si tengo multiples test dentro la forma seria, agregandole :: y el nombre del test que quieres probar
+en ese.
+por ejemplo
+python -m pytest .\24_Introduccion_Pytest\Test_Loguin_1.py::test_cuatro
+
+*Ojo si estoy dentro de la carpeta solo uso pytest y el archivo q esta dentro de esa carpeta, pero,
+como lo estoy corriendo desde la raiz, uso todo ese comando

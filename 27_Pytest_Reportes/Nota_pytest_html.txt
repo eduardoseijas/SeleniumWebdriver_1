@@ -1,0 +1,11 @@
+Comando para instalar pytest html
+
+pip install pytest-html
+
+Comando para lanzar
+
+--html=reporte_ con el nombre del proyecto, en mi caso, que estoy lanzando desde la raiz seria asi
+
+python -m pytest .\27_Pytest_Reportes\Test_Reporte_html.py --html=reporte_Reporte_html.html
+
+

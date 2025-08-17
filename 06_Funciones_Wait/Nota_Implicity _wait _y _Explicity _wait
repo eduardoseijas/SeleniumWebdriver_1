@@ -1,0 +1,17 @@
+Le da tiempo al navegador para conseguir los objetos
+
+.implicite_wait()
+
+https://selenium-python.readthedocs.io/waits.html
+
+ese es el portal web donde esta toda la documentacion
+
+Librerias:
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, ""))) #el btn es el elemento #dentro de las comillas colocar el id, xpath o lo que sea que se quiera validar
+el btn es el nombre de la variable
+
+Sino lo consigue por este elemento presence_of_element_located, puede ser por este element_to_be_clickable
+esto sale en la documentacion

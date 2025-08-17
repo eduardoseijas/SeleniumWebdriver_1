@@ -1,0 +1,11 @@
+Para poder correr un proyecto que me esta dando problemas, puedo hacerlo desde la raiz usando toda la ruta con
+python por ejemplo
+
+todo esto desde la raiz \practica_Selenium_2
+python -m pytest .\23_Mouse_Actions\Mouse_ActionChains.py
+
+si quiero correr todo lo que esta en una carpeta, tambien puedes hacerlo desde la razin
+con el comando
+python -m pytest y el numero de la carpeta, por ejemplo en este caso que es la carpeta 23:
+python -m pytest .\23_Mouse_Actions\
+

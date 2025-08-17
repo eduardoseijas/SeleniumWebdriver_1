@@ -1,0 +1,13 @@
+En los decoradores al crear un def setuo_####():
+en la cabecera debes crear el @pytest.fixture(scope='module')
+
+@pytest.fixture(scope='module')
+def setup_loguin_uno():
+    print("Empezando el loguin del sistema uno")
+    yield
+    print("Saliendo del sistema prueba ok")
+
+esto permitira lanzar la prueba
+por ejemplo ir a la carpeta 25, ver el Test_Pytest_Fixture_4_Decorators.py
+
+

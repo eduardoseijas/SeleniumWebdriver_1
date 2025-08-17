@@ -1,0 +1,9 @@
+Importante colocar la libreria:
+
+from allure_commons.types import AttachmentType
+
+Comando:
+
+allure.attach(driver.get_screenshot_as_png(),name="Regresanalapaganterior",attachment_type=AttachmentType.PNG)
+
+OJO: En name= puedes colocar el nombre que cosiedes o quieras

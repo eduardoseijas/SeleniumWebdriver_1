@@ -1,0 +1,16 @@
+Con este comando configuro para que sepa mi nombre de usuario, para presentarnos
+git config --global user.name "Eduardo"
+
+puede ser con el mail tambien
+git config --global user.email "eduardoseijas18@gmail.com"
+
+Comando para iniciar en el sistema, una copia o respaldo es
+git init
+
+Para ver el estatus de esto, usamos el comando
+
+git status
+
+para agregar, debo usar el comando
+
+git add .. (este siempre se usa antes de hacer el git commit -m "")

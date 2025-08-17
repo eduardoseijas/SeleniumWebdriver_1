@@ -1,0 +1,18 @@
+En esta pag https://github.com/qauni/json-server
+Clonamos el repositorio
+git clone https://github.com/qauni/json-server.git
+
+este repositorio lo clonamos dentro de nuestra carpeta 28_Json_Postman
+luego vamos dentro de nuestra carpeta json-server con el comando:
+
+cd json-server
+
+y dentro de esto, instalamos
+
+
+npm install -g json-server
+
+el comando para correr es:
+json-server --watch y nombre del proyecto en este caso
+
+json-server --watch test_postman.json

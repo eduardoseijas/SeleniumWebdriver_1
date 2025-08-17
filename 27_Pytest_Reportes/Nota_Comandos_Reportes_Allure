@@ -1,0 +1,12 @@
+El comando para poder sacar un reporte allure, en este caso, que es desde la raiz
+
+--alluredir "" dentro de los parentesis colocas el nombre de donde lo quieres colocar
+
+python -m pytest .\27_Pytest_Reportes\Test_Reporte_html.py --alluredir "./Allure_Reportes"
+
+buscar de levantar el servidor y se ejecute en el servidor de allurereport
+
+comando:
+
+allure serve .\Allure_Reportes\
+

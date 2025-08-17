@@ -1,0 +1,41 @@
+Para correr en esta por ejemplo como siempre es
+
+pytest y el nombre del proyecto agregandole -s -v -k y nombre del test en ese proyecto
+
+yo lo estoy haciendo desde la raiz asi q en mi caso seria asi
+por ejemplo
+
+python -m pytest .\25_Fixture\Test_Pytest_Fixture_6_Marks.py -s -v -k uno
+
+si quiero que no corra uno
+
+haciendolo desde la raiz
+python -m pytest .\25_Fixture\Test_Pytest_Fixture_6_Marks.py -s -v -k "not cuatro"
+
+y si es desde la carpeta:
+
+pytest y el nombre del proyecto agregandole -s -v -k "not cuatro"
+
+si coloco en la cabecera
+@pytest.mark.uno  (OJO, esto es guiandonos con la prueba Test_Pytest_Fixture_6_Marks.py)
+
+en vez de usar la -k USAS la -m
+
+*Para correr una selecionada:
+python -m pytest .\25_Fixture\Test_Pytest_Fixture_6_Marks.py -s -v -m seis
+
+*Para seleccionar una que NO queires que corra
+python -m pytest .\25_Fixture\Test_Pytest_Fixture_6_Marks.py -s -v -m "not cuatro"
+
+En las cabeceras si notas en ese ejercicio tenemos lo sisguiente
+@pytest.mark.uno
+
+puedes colocarlo si quieres que ese corra por ejemplo
+@pytest.mark.run
+
+y que no corra
+@pytest.mark.notrun
+
+y para correrlo
+
+python -m pytest .\25_Fixture\Test_Pytest_Fixture_6_Marks.py -s -v -m run

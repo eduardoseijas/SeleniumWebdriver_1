@@ -1,0 +1,46 @@
+
+Desinstllar ciertas cosas desde la raiz, como:
+
+pip uninstall virtualenv urllib3
+
+Instalar desde la raiz
+
+pip install virtualenv
+
+pip list
+
+para crear -> virtualenv Maquina_Virtual_1
+
+iniciar maquina virtual
+
+es en la carpeta script
+usando el comando .\activate.ps1
+
+para desactivar  comando -> deactivate
+
+
+esto es dentro de la maquina virtual creada, con la maquina virtual encendida:
+instalar paquetes dentro de la maquina virtual -> pip install selenium
+
+instalar pytest
+
+pip install pytest
+
+Para poder correr en paralelo, varias maquinas, hay que instalar -> pip install pytest-xdist
+
+para correr todos los archivos dentro de maquina virtual
+
+py.test
+
+Importante: OJO
+dentro de la maquina virtual, para correr todos los test que esten aqui, deben guardarse con el nombre test
+y correrlo con pytest --ignore=Lib o py.test --ignore=Lib
+Si es que la carpeta Lib da problema, y sino da problema se puede correr con py.test
+
+con el comando py.test -n 1
+o
+py.test -n 5
+es repetir los lanzamientos, lanzar varios a la vez
+
+Puedo mezclarlo asi para que no me de error por los Lib
+py.test --ignore=Lib -n 2 por ejemplo

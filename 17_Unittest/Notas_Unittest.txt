@@ -1,0 +1,34 @@
+Unittest se crea por una clase por ejemplo
+
+para iniciar
+class base_test(unittest.TestCase), con ese comando se crea la libreria import unittest
+
+para cerrar
+
+def tearDown(self):
+driver.close()
+
+if name__=='__main__':
+    unittest.main()
+
+importante siguiento este estructura
+
+class PruebaLogin(unittest.TestCase): #el nombre este puede variar PruebaLogin
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        t = 2
+
+    def test_login1(self): #pero en este, todos deben comenzar por test_
+        driver = self.driver
+        driver.get("https://www.saucedemo.com/")
+        driver.maximize_window()
+        time.sleep(4)
+
+
+     def tearDown(self):
+        driver = self.driver
+        driver.close()
+
+
+if __name__=='__main__':
+    unittest.main()
