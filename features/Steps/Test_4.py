@@ -26,7 +26,7 @@ from behave import when
 driver =""
 f=""
 
-###CON ESTO ES PARA AGREGAR O PASANDO PARAMETROS A MI PROYECTO en el when
+###Lanzando multiples casos
 
 @given(u'Abrimos el navegador en chrome - V2')
 def step_impl(context):
