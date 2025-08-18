@@ -1,0 +1,17 @@
+Este feature lo creo global en todo el proyecto
+
+Sino figura el simbolo o logo de cucumber o bdd behave al crear un archivo, hay q intalar ese plugin
+
+crearlo siempre, como por ejemplo
+
+test_uno.feature
+
+comandos para lanzar operaciones
+
+behave features
+
+para correr uno por uno en este caso puede ser
+
+behave .\features\Test_Dos.feature
+O
+behave .\features\Test_Uno.feature

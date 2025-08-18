@@ -1,0 +1,13 @@
+Pag para instalar BDD Behave
+
+https://behave.readthedocs.io/en/latest/install/
+
+comando
+
+pip install behave
+
+luego instalamos
+
+pip install -U behave
+
+en el menu -> setting ->en mi proyecto -> python interpreter -> instalamos behave
