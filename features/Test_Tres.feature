@@ -19,3 +19,4 @@ Feature: Nuestro tercer Demo
       When Cargamos los datos "juan" "1234567"
       Then ingresamos a la pag chrome -v1
       And Seleccionamos el archivo en chrome -v1
+
