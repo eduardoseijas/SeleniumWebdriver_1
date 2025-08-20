@@ -584,3 +584,43 @@ class Libreria_Funciones_Globales():
     #salida
     def Salida(self):
         print("Se termina la prueba exitosamete")
+
+    #Validar que existe
+    def Existe(self,tipo,selector,tiempo):
+        if (tipo== "xpath"):
+            try:
+                val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.XPATH, selector)))
+                val = self.driver.execute_script("arguments[0].scrollIntoView();", val)
+                val = self.driver.find_element(By.XPATH, selector)
+                print("El elemento {} -> existe".format(selector))
+                t = time.sleep(tiempo)
+                return "Existe"
+            except TimeoutException as ex:
+                print(ex.msg)
+                print("No se encontro, el elemento:" + selector)
+                return "No Existe"
+        elif(tipo=="id"):
+            try:
+                val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.ID, selector)))
+                val = self.driver.execute_script("arguments[0].scrollIntoView();", val)
+                val = self.driver.find_element(By.ID, selector)
+                print("El elemento {} -> existe".format(selector))
+                t = time.sleep(tiempo)
+                return "Existe"
+            except TimeoutException as ex:
+                print(ex.msg)
+                print("No se encontro, el elemento:" + selector)
+                return "No Existe"
+
+        elif (tipo == "css"):
+            try:
+                val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, selector)))
+                val = self.driver.execute_script("arguments[0].scrollIntoView();", val)
+                val = self.driver.find_element(By.CSS_SELECTOR, selector)
+                print("El elemento {} -> existe".format(selector))
+                t = time.sleep(tiempo)
+                return "Existe"
+            except TimeoutException as ex:
+                print(ex.msg)
+                print("No se encontro, el elemento:" + selector)
+                return "No Existe"

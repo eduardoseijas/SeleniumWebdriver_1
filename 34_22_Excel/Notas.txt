@@ -1,0 +1,6 @@
+Libreria
+import openpyxl
+
+comando para instalar
+
+pip install openpyxl
