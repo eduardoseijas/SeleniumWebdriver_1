@@ -1,2 +1,6 @@
 Prueba_para_el_git_ignore.txt
 
+35_Carpeta_Para_Ser_Ignorada/
+
+#Con la carpeta 35, al colocarle al final / es para carpetas
+#Con el formato del archivo, es solo para el archivo, ejemplo .txt
