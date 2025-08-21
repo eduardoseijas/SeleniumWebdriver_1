@@ -49,3 +49,6 @@ por ejemplo git reset --soft 555179e
 
 *El comando que nos da todos los momivientos realizados
 git reflog
+
+*Para sacar del control git un archivo  sin borrarlo del dico:
+git rm --cached report_dos.html
