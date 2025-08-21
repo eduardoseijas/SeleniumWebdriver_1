@@ -55,4 +55,4 @@ git reflog
 
 *Para sacar del control git un archivo  sin borrarlo del dico:
 git rm --cached y el nombre del archivo con su formato por ejemplo
-git rm --cached report_dos.html
+git rm --cached Prueba_para_el_git_ignore.txt
