@@ -1,0 +1,47 @@
+Una vez creado el proyecto en jenkins
+
+para poder correrlo
+
+Debo configurarlo:
+
+En descripcion, colocar una breve descripcion que quieras
+
+Lueso si se crea un workspace, usar la ruta donde esta el proyecto en este caso es:
+
+en la opcion:
+
+use custom workspace - > C:\Practica_Selenium_2>  #esa es la ruta en que tengo mi proyecto
+
+Ahora bien, ya que dentro de jenkins no tengo instalado ni python, ni selenium,
+en
+
+Build Steps
+ seleccionar la opcion -> Execute Windows batch command
+
+ y dentro de este colocar Todo este comando que esta dentro de las rallas
+
+----------------------------------------------------------------------------------------------------------
+
+REM 1) Ir a la raíz del workspace
+cd /d "%WORKSPACE%"
+
+REM 2) Crear venv si no existe
+if not exist "%WORKSPACE%\.venv\Scripts\activate.bat" (
+  "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\python.exe" -m venv "%WORKSPACE%\.venv"
+)
+
+REM 3) Activar venv
+call "%WORKSPACE%\.venv\Scripts\activate.bat"
+
+REM 4) Instalar/actualizar dependencias (Selenium + Pytest)
+"%WORKSPACE%\.venv\Scripts\python.exe" -m pip install -U pip
+"%WORKSPACE%\.venv\Scripts\python.exe" -m pip install pytest selenium
+
+REM 5) Añadir el workspace al PYTHONPATH (si usas módulos comunes)
+set PYTHONPATH=%WORKSPACE%;%WORKSPACE%\AA_Funciones_Globales_Total;%PYTHONPATH%
+
+REM 6) Ejecutar el test desde la raíz
+"%WORKSPACE%\.venv\Scripts\python.exe" -m pytest "25_Fixture\Test_Pytest_Fixture_2.py"
+
+-----------------------------------------------------------------------------------------
+

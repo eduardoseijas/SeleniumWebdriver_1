@@ -1,0 +1,82 @@
+Cree en la raiz del proyecto en la carpeta C:\Practica_Selenium_2>
+
+Un Archivo .txt
+requirements.txt
+en ese archivo estan las librerias a instalar para poder correr en jenkins si que los comandos sean tan largos
+
+Un archivo .bat
+run_tests.bat
+este archivo tambien tiene un comando para encender la maquina virtual y mas desde que lanzo, dentro de ellas podras ver
+su estructura:
+
+Nota: REM es una forma de hacer comentario y que no te lo tome como codigo
+##################################################################################################################
+
+@echo off
+setlocal enableextensions
+
+REM =====================================================
+REM = Script global para ejecutar tests de Selenium con pytest
+REM = Explicación paso a paso incluida
+REM =====================================================
+
+REM === 1) Guardar la ruta raíz del proyecto (donde está este .bat)
+REM %~dp0 devuelve la ruta del directorio donde vive este archivo .bat
+set ROOT=%~dp0
+
+REM === 2) Crear el entorno virtual si no existe
+REM - Busca el archivo activate.bat dentro de .venv
+REM - Si no lo encuentra:
+REM     a) Crea un entorno virtual usando Python 3.13
+REM     b) Activa el entorno
+REM     c) Actualiza pip
+REM     d) Instala todas las librerías definidas en requirements.txt
+if not exist "%ROOT%.venv\Scripts\activate.bat" (
+  "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\python.exe" -m venv "%ROOT%.venv"
+  call "%ROOT%.venv\Scripts\activate.bat"
+  "%ROOT%.venv\Scripts\python.exe" -m pip install -U pip
+  "%ROOT%.venv\Scripts\python.exe" -m pip install -r "%ROOT%requirements.txt"
+) else (
+  REM - Si ya existe, simplemente activa el entorno virtual
+  call "%ROOT%.venv\Scripts\activate.bat"
+)
+
+REM === 3) Añadir funciones globales al PYTHONPATH (opcional)
+REM Esto permite que Python pueda importar módulos compartidos como AA_Funciones_Globales_Total
+REM Si no usas esa carpeta, esta línea no afecta
+set PYTHONPATH=%ROOT%;%ROOT%AA_Funciones_Globales_Total;%PYTHONPATH%
+
+REM === 4) Ejecutar pytest con los argumentos que se pasen al .bat
+REM - %* significa: "todos los parámetros que reciba este .bat"
+REM - Así puedes correr:
+REM       run_tests.bat 25_Fixture\Test_Pytest_Fixture_2.py   → solo ese archivo
+REM       run_tests.bat 25_Fixture                            → toda la carpeta
+REM       run_tests.bat .                                     → todos los tests del proyecto
+REM - También puedes añadir opciones de pytest:
+REM       run_tests.bat 25_Fixture -n auto --html=report.html
+"%ROOT%.venv\Scripts\python.exe" -m pytest %*
+
+###############################################################################################
+
+Para correr el comando en jenkins
+
+cd /d "%WORKSPACE%"
+call run_tests.bat 25_Fixture\Test_Pytest_Fixture_2.py
+
+Si quiero realizar otra carpeta o test es similar pero coloco la carpeta y archivo que quiera
+
+cd /d "%WORKSPACE%"
+call run_tests.bat 24_Introduccion_Pytest\Test_Pytest_Loguin_P2.py
+
+
+Para ejecutar desde powershell
+.\run_tests.bat .\25_Fixture\Test_Pytest_Fixture_2.py
+
+desde CMD
+
+run_tests.bat .\25_Fixture\Test_Pytest_Fixture_2.py
+
+
+
+
+
