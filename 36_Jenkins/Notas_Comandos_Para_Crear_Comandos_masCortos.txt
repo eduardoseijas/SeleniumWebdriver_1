@@ -60,12 +60,12 @@ REM       run_tests.bat 25_Fixture -n auto --html=report.html
 
 Para correr el comando en jenkins
 
-cd /d "%WORKSPACE%"
+cd /d D:\Practica_Selenium_2
 call run_tests.bat 25_Fixture\Test_Pytest_Fixture_2.py
 
 Si quiero realizar otra carpeta o test es similar pero coloco la carpeta y archivo que quiera
 
-cd /d "%WORKSPACE%"
+cd /d D:\Practica_Selenium_2
 call run_tests.bat 24_Introduccion_Pytest\Test_Pytest_Loguin_P2.py
 
 
