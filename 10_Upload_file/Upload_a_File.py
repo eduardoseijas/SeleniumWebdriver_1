@@ -23,7 +23,7 @@ time.sleep(2)
 try:
     buscar=WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='fileinput']")))
     buscar=driver.find_element(By.XPATH,"//input[@id='fileinput']")
-    buscar.send_keys("C://Practica_Selenium_2//10_Upload_file//Imagenes//demo1.jpg")
+    buscar.send_keys("D://Practica_Selenium_2//10_Upload_file//Imagenes//demo1.jpg")
     #en la ruta hay que usar // no \
     driver.find_element(By.XPATH,"//input[@id='itsanimage']").click()
     driver.find_element(By.XPATH,"//input[@name='upload']").click()
