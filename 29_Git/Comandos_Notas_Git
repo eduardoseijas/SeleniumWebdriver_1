@@ -9,6 +9,9 @@ git init
 
 *Para ver el estatus de esto, usamos el comando
 
+Sie muevo un archivo de carpeta es importante hacer, colocando la carpeta y ruta en la que esta
+git config --global --add safe.directory D:/Practica_Selenium_2
+
 git status
 
 *para agregar, debo usar el comando
