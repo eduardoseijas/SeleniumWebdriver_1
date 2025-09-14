@@ -29,7 +29,7 @@ driver.find_element(By.XPATH,"//textarea[@name='comments']").send_keys("Este com
 time.sleep(t)
 imagen=driver.find_element(By.XPATH,"//input[@name='filename']")
 time.sleep(t)
-imagen.send_keys("C://Practica_Selenium_2//10_Upload_file//Imagenes")
+imagen.send_keys("D://Practica_Selenium_2//10_Upload_file//Imagenes")
 #saco la ruta desde explore en C:\Practica_Selenium_2\10_Upload_file\Imagenes y le invierto \ por //
 time.sleep(t)
 driver.find_element(By.XPATH,"//input[@value='cb3']").click()
